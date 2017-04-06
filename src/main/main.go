@@ -25,7 +25,7 @@ const WebhookURL = "https://msu-go-2017.herokuapp.com/"
 func main() {
 	// Heroku прокидывает порт для приложения в переменную окружения PORT
 	port := os.Getenv("PORT")
-	bot, err := tgbotapi.NewBotAPI("270497469:AAFBnCofRqpaZIcBD_Re2N5aVbTcvWe8XDw")
+	bot, err := tgbotapi.NewBotAPI("315298480:AAEccNOWsRU-lX00lP-oVSymNdRWhh5vVzc")
 	if err != nil {
 		log.Fatal(err)
 	}
