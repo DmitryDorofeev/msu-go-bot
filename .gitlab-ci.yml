@@ -2,4 +2,8 @@ image: golang:1.8
 
 test:
   script:
+    - apt-get install ruby -y
+    - gem install dpl
+    - go get github.com/constabulary/gb/...
+    - gb vendor restore
     - gb test -v
