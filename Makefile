@@ -1,12 +1,12 @@
 all: lint test
 
-build:
+build: vendor
 	gb build
 
 vendor:
 	gb vendor restore
 
-test:
+test: vendor
 	gb test -v
 
 lint:
