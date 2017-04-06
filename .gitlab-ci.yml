@@ -8,3 +8,4 @@ test:
     - go get github.com/constabulary/gb/...
     - gb vendor restore
     - gb test -v
+    - dpl --provider=heroku --app=msu-go-2017 --api-key=$HEROKU_PRODUCTION_API_KEY
