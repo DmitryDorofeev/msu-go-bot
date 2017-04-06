@@ -2,6 +2,7 @@ image: golang:1.8
 
 test:
   script:
+    - apt-get update -y
     - apt-get install ruby -y
     - gem install dpl
     - go get github.com/constabulary/gb/...
