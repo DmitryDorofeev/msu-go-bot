@@ -1,3 +1,5 @@
+.PHONY: all build vendor test lint
+
 all: lint test
 
 build: vendor
