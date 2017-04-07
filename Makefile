@@ -12,5 +12,4 @@ test: vendor
 	gb test -v
 
 lint:
-	go vet ./src/...
-	golint
+	gometalinter --disable-all --enable=errcheck --enable=vet --enable=vetshadow ./src/...
