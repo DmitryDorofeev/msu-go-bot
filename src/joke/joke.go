@@ -16,9 +16,9 @@ type JokeResponse struct {
 	Value Joke   `json:"value"`
 }
 
-func GetJoke() string {
+func GetJoke(url string) string {
 	c := http.Client{}
-	resp, err := c.Get("http://api.icndb.com/jokes/random?limitTo=[nerdy]")
+	resp, err := c.Get(url)
 	if err != nil {
 		return "jokes API not responding"
 	}

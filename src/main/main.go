@@ -13,6 +13,7 @@ import (
 // установка зависимостей - gb vendor fetch gopkg.in/telegram-bot-api.v4
 // установка зависимостей из манифеста - gb vendor restore
 
+const JOKE_URL = "http://api.icndb.com/jokes/random?limitTo=[nerdy]"
 
 var buttons = []tgbotapi.KeyboardButton{
 	tgbotapi.KeyboardButton{Text: "Get Joke"},
@@ -51,7 +52,7 @@ func main() {
 		switch update.Message.Text {
 		case "Get Joke":
 			// Если пользователь нажал на кнопку, то придёт сообщение "Get Joke"
-			message = tgbotapi.NewMessage(update.Message.Chat.ID, joke.GetJoke())
+			message = tgbotapi.NewMessage(update.Message.Chat.ID, joke.GetJoke(JOKE_URL))
 		default:
 			message = tgbotapi.NewMessage(update.Message.Chat.ID, `Press "Get Joke" to receive joke`)
 		}
