@@ -16,7 +16,7 @@ import (
 const JOKE_URL = "http://api.icndb.com/jokes/random?limitTo=[nerdy]"
 
 var buttons = []tgbotapi.KeyboardButton{
-	tgbotapi.KeyboardButton{Text: "Get Joke"},
+	tgbotapi.KeyboardButton{Text: "Joke"},
 }
 
 // При старте приложения, оно скажет телеграму ходить с обновлениями по этому URL
