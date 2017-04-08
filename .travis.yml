@@ -6,6 +6,7 @@ go:
 before_install:
   - go get github.com/constabulary/gb/...
   - go get -u github.com/golang/lint/golint
+  - go get -u gopkg.in/alecthomas/gometalinter.v1
 
 deploy:
   provider: heroku
